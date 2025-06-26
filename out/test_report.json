@@ -1,0 +1,30 @@
+{
+  "generated": "2025-06-26T09:23:14.927251Z",
+  "results": [
+    {
+      "host": "example.com",
+      "ports": [
+        {
+          "port": 80,
+          "protocol": "tcp",
+          "state": "open",
+          "name": "http",
+          "product": "nginx",
+          "version": "1.18"
+        },
+        {
+          "port": 22,
+          "protocol": "tcp",
+          "state": "open",
+          "name": "ssh",
+          "product": "OpenSSH",
+          "version": "7.9"
+        }
+      ]
+    },
+    {
+      "host": "192.0.2.1",
+      "ports": []
+    }
+  ]
+}

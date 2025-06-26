@@ -1,0 +1,6 @@
+requests
+python-nmap
+jinja2
+PyYAML
+python-whois
+playwright  # optional, for screenshots

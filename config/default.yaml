@@ -1,0 +1,3 @@
+  api_keys:
+    virustotal: "${VT_API_KEY}"
+    securitytrails: "${ST_API_KEY}"

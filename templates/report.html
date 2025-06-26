@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RapidRecon Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1, h2 { color: #2c3e50; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background-color: #f4f6f8; text-align: left; }
+    tr:nth-child(even) { background-color: #fafafa; }
+    .no-ports { font-style: italic; color: #7f8c8d; }
+  </style>
+</head>
+<body>
+  <h1>RapidRecon Report</h1>
+  <p>Generated: {{ generated }}</p>
+
+  {% for host in results %}
+    <section>
+      <h2>{{ host.host }}</h2>
+      {% if host.ports %}
+        <table>
+          <thead>
+            <tr>
+              <th>Port</th><th>Protocol</th><th>State</th><th>Service</th><th>Product</th><th>Version</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in host.ports %}
+              <tr>
+                <td>{{ p.port }}</td>
+                <td>{{ p.protocol }}</td>
+                <td>{{ p.state }}</td>
+                <td>{{ p.name }}</td>
+                <td>{{ p.product or '-' }}</td>
+                <td>{{ p.version or '-' }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p class="no-ports">No open ports found.</p>
+      {% endif %}
+    </section>
+  {% endfor %}
+
+</body>
+</html>

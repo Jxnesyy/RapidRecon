@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RapidRecon Report</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1, h2 { color: #2c3e50; }
+    table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background-color: #f4f6f8; text-align: left; }
+    tr:nth-child(even) { background-color: #fafafa; }
+    .no-ports { font-style: italic; color: #7f8c8d; }
+  </style>
+</head>
+<body>
+  <h1>RapidRecon Report</h1>
+  <p>Generated: 2025-06-26T09:17:37.234447Z</p>
+
+  
+    <section>
+      <h2>example.com</h2>
+      
+        <table>
+          <thead>
+            <tr>
+              <th>Port</th><th>Protocol</th><th>State</th><th>Service</th><th>Product</th><th>Version</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td>80</td>
+                <td>tcp</td>
+                <td>open</td>
+                <td>http</td>
+                <td>nginx</td>
+                <td>1.18</td>
+              </tr>
+            
+              <tr>
+                <td>22</td>
+                <td>tcp</td>
+                <td>open</td>
+                <td>ssh</td>
+                <td>OpenSSH</td>
+                <td>7.9</td>
+              </tr>
+            
+          </tbody>
+        </table>
+      
+    </section>
+  
+    <section>
+      <h2>192.0.2.1</h2>
+      
+        <p class="no-ports">No open ports found.</p>
+      
+    </section>
+  
+
+</body>
+</html>
